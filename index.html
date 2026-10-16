@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Везём тем, кто не вывозит — кейс Лизы Александровой</title>
+<meta name="description" content="Спекулятивная кампания для сервиса доставки «Велосамокат»: как бренды могут говорить об усталости. Кейс Лизы Александровой.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Превью для Telegram, LinkedIn и соцсетей.
+     TODO: замените USERNAME и REPO на свои, когда страница появится на GitHub Pages. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Везём тем, кто не вывозит">
+<meta property="og:description" content="Спекулятивная кампания для сервиса доставки «Велосамокат». Кейс Лизы Александровой.">
+<meta property="og:image" content="https://USERNAME.github.io/REPO/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://USERNAME.github.io/REPO/">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* Layout: one centred reading column with left-aligned text; images break out wider in rounded frames.
+   Soft system: lime appears in three roles — key thought (pill highlight), level numbers and the main button.
+   Labels sit in outline pills; each chapter opens with its number in an outline circle. */
+:root{
+  --paper:#ffffff;
+  --ink:#161616;
+  --mute:#6b6b6b;
+  --line:#d9d9d6;
+    --lime:#ccfe8b;
+  --stroke:1.3px;
+  --r-img:28px;
+  --sans:Arial,"Helvetica Neue",Helvetica,"Liberation Sans",sans-serif;
+  --col:620px;
+  --wide:1100px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+a{color:inherit}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:18px/1.55 var(--sans);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0;
+  -webkit-font-smoothing:antialiased;
+}
+p{margin:0}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* Pills */
+.pill{display:inline-flex;align-items:center;gap:8px;border:var(--stroke) solid var(--ink);border-radius:999px;padding:9px 18px 10px;font-size:14px;line-height:1;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:var(--paper);white-space:nowrap}
+.pill.lime{background:var(--lime)}
+.pill.small{padding:5px 11px 6px;font-size:11px;letter-spacing:.06em}
+.pill.plain{text-transform:none;letter-spacing:0;font-size:13px;padding:6px 13px 7px}
+a.pill{text-decoration:none;transition:background-color .2s}
+a.pill:hover{background:var(--lime)}
+
+/* Top bar */
+.top{max-width:var(--wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px}
+.top .name{font-size:16px}
+.top nav{display:flex;gap:8px}
+
+/* Hero */
+.hero{text-align:center;padding-block:clamp(56px,10vw,120px) 0;display:flex;flex-direction:column;align-items:center;gap:22px}
+.hero h1{margin:0;font-weight:400;font-size:clamp(50px,9.4vw,124px);line-height:.94;letter-spacing:-.045em;text-wrap:balance}
+.hero .sub{font-size:clamp(16px,1.6vw,20px);margin-top:6px}
+.hero .roles{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+
+/* Wide media */
+.wide{max-width:var(--wide);margin-inline:auto}
+.frame{display:block;width:100%;height:auto;border-radius:var(--r-img)}
+.hero-img{margin-top:clamp(56px,8vw,96px)}
+.hero-img .frame{aspect-ratio:2200/827;object-fit:cover}
+.single{max-width:520px;margin-inline:auto;width:100%}
+.jrow{display:flex;gap:clamp(8px,1.4vw,16px)}
+.jrow .frame{flex:var(--ar) 1 0;min-width:0;aspect-ratio:var(--ar);object-fit:cover}
+
+/* Intro plates */
+.intro{max-width:var(--col);margin:clamp(56px,8vw,88px) auto 0;display:grid;gap:26px}
+.plate{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;font-size:16px;line-height:1.55}
+.plate .pill{justify-self:start;align-self:start;margin-top:1px}
+.inline-link{background:var(--lime);border-radius:999px;padding:1px 10px 2px;white-space:nowrap;text-decoration:none}
+.inline-link:hover{text-decoration:underline}
+
+/* Chapter spacing: no separate divider, the numbered circle opens each chapter */
+section[id]{margin-top:clamp(120px,15vw,190px)}
+.end{margin-top:clamp(120px,15vw,190px)!important}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Chapter head */
+.ch-head{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;margin-bottom:clamp(44px,6vw,68px)}
+.circ{width:clamp(72px,7vw,88px);aspect-ratio:1;border:var(--stroke) solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:clamp(26px,2.6vw,32px);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.ch-head h2{margin:0;font-size:22px;font-weight:400;line-height:1.2;text-transform:uppercase;letter-spacing:-.005em;max-width:420px;text-wrap:balance}
+
+/* Reading column */
+.col{max-width:var(--col);margin-inline:auto;display:flex;flex-direction:column;gap:22px}
+mark{color:inherit;background:var(--lime);border-radius:999px;padding:.02em .38em .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.display{font-weight:400;font-size:clamp(40px,6.4vw,76px);line-height:.98;letter-spacing:-.04em;text-wrap:balance;margin-top:28px}
+.question{font-weight:400;font-size:clamp(28px,3.8vw,46px);line-height:1.08;letter-spacing:-.03em;text-wrap:balance;margin-top:34px}
+
+/* Levels */
+.levels{display:grid;gap:24px;margin-top:6px;padding:0;list-style:none}
+.levels li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:16px;align-items:start}
+.levels .n{width:36px;height:36px;border-radius:50%;background:var(--lime);border:var(--stroke) solid var(--ink);display:grid;place-items:center;font-size:15px}
+.levels b{display:block;font-weight:700}
+
+/* Figures */
+figure{margin:0}
+figcaption{font-size:13px;line-height:1.4;color:var(--mute);margin-top:12px;padding-left:4px}
+figcaption b{color:var(--ink);font-weight:700}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:clamp(48px,7vw,72px)}
+.photos .frame{aspect-ratio:900/1273;object-fit:cover}
+.formats{display:grid;gap:clamp(40px,6vw,64px);margin-top:clamp(48px,7vw,72px)}
+
+/* Footer */
+.end{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;gap:26px;padding-bottom:clamp(72px,10vw,120px)}
+.end .contacts{display:flex;flex-wrap:wrap;gap:10px}
+.end .contacts .pill{padding:14px 24px 15px;font-size:15px}
+.end .sign{font-size:13px;color:var(--mute)}
+
+/* Board of cultural signals (chapter 1): straight rows, every item keeps its own proportions */
+.board-wrap{margin-top:clamp(48px,7vw,72px);max-width:789px}
+.board{position:relative;aspect-ratio:788.9/761.1}
+.board-note{font-size:13px;color:var(--mute);margin-top:14px;padding-left:4px}
+.it{position:absolute;margin:0;outline:none}
+.pic{display:block;width:100%;height:100%;object-fit:cover;border-radius:10px;background:#fff}
+.pic.book{border-radius:6px}
+.pic.shot{outline:1px solid var(--line);outline-offset:-1px}
+.book-it{cursor:pointer}
+.book-it:hover,.book-it:focus,.book-it:focus-within{z-index:5}
+.book-it:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:8px}
+.note{position:absolute;top:0;left:calc(100% + 14px);width:270px;margin:0;background:#fff;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.06);padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;
+  opacity:0;visibility:hidden;transform:translateX(-10px);transition:opacity .28s ease,transform .32s cubic-bezier(.2,.7,.2,1),visibility 0s linear .32s;pointer-events:none}
+.book-it.left .note{left:auto;right:calc(100% + 14px);transform:translateX(10px)}
+.note b{font-size:14px;line-height:1.28;font-weight:700}
+.note span{font-size:13px;line-height:1.45}
+.book-it:hover .note,.book-it:focus .note,.book-it:focus-within .note{opacity:1;visibility:visible;transform:none;transition:opacity .28s ease,transform .32s cubic-bezier(.2,.7,.2,1),visibility 0s}
+@media (prefers-reduced-motion:reduce){.note,.book-it.left .note{transform:none!important}}
+@media (max-width:720px){
+  .board{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+  .it{position:relative;left:auto!important;top:auto!important;width:auto!important;height:auto!important;aspect-ratio:var(--ar)}
+  .it.wide-item{grid-column:1/-1}
+  .note,.book-it.left .note{position:static;width:auto;margin-top:8px;box-shadow:none;padding:4px 2px;display:none;opacity:1;visibility:visible;transform:none}
+  .book-it:focus .note,.book-it:focus-within .note{display:flex}
+  .book-it{aspect-ratio:auto!important}
+  .book-it .pic{aspect-ratio:var(--ar);height:auto}
+}
+
+@media (max-width:640px){
+  body{font-size:17px}
+  .top .name{font-size:14px}
+  .top nav .pill:first-child{display:none}
+  .plate{grid-template-columns:minmax(0,1fr);gap:8px}
+  .photos{grid-template-columns:minmax(0,1fr);gap:28px;max-width:440px;margin-inline:auto}
+  .jrow{flex-wrap:wrap}
+  .jrow .frame{flex:1 1 100%}
+  .ch-head h2{font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<!-- TODO: в двух местах ниже замените your_telegram и you@example.com на свои контакты -->
+<header class="top">
+  <span class="name">Лиза Александрова</span>
+  <nav aria-label="Навигация">
+    <a class="pill" href="#observation">Читать кейс</a>
+    <a class="pill lime" href="#contacts">Написать</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Везём тем,<br>кто не вывозит</h1>
+  <p class="sub">Спекулятивная кампания для сервиса доставки «Велосамокат»</p>
+  <div class="roles"><span class="pill plain">Стратегия</span><span class="pill plain">Концепция</span><span class="pill plain">Визуал</span></div>
+</section>
+
+<figure class="wide hero-img">
+  <img class="frame" src="img/hero-wall.jpg" width="2200" height="827" alt="Ряд из трёх пар плакатов на длинной стене под дождём: слоган «Везём тем, кто не вывозит» и кадры кухни, рабочего стола и прихожей, мимо проходит человек с зонтом">
+</figure>
+
+<section class="intro">
+  <div class="plate"><span class="pill small">О кейсе</span><p>Это спекулятивный проект: кампанию я придумала сама, без заказчика и брифа. «Велосамокат» — вымышленный бренд. Кампания не делалась по заказу какого-либо реального сервиса доставки и ни с кем не согласована. Мне хотелось проверить одну гипотезу о том, как бренды могут говорить об усталости внутри бренд-кома.</p></div>
+  <div class="plate"><span class="pill small">Обо мне</span><p>Я — Лиза Александрова, бренд-стратег и трендвотчер. Работаю на стыке стратегии, качественных исследований и культурной аналитики.</p></div>
+  <div class="plate"><span class="pill small">Связаться</span><p>Если хотите запустить эту кампанию по-настоящему, напишите мне: <a class="inline-link" href="https://t.me/your_telegram">Telegram</a> <a class="inline-link" href="mailto:you@example.com">почта</a></p></div>
+</section>
+
+<section id="observation">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>01</span><h2>Наблюдение</h2></div>
+  <div class="col">
+    <p>Как стратег я давно ищу возможность поработать в бренд-коме с чувством современной усталости.</p>
+    <p>Усталость — чувство, которое мы так или иначе разделяем, поэтому это хорошая рамка для разговора с широкой аудиторией. При этом бренды до сих пор говорят о ней в основном очень поверхностно. Замечая усталость, реклама почти всегда предлагает её вылечить: выспаться на нашем матрасе, взбодриться нашим кофе, разгрузить голову нашим приложением.</p>
+    <p><mark>Мне это кажется нечестным.</mark></p>
+    <p>Усталость современного человека скорее экзистенциальная, чем физическая, и все понимают, что ни один продукт её не отменит.</p>
+  </div>
+  <div class="wide board-wrap">
+    <div class="board" lang="ru" aria-label="Доска: книги, мемы, понятия и исследования об усталости">
+      <figure class="it wide-item" style="--ar:3.2372;left:11.599%;top:81.509%;width:47.743%;height:15.287%"><img class="pic shot" src="img/board/bedrotting.jpg" width="1269" height="392" alt="Заголовок статьи: «Они просто гниют в кровати. Что такое бедроттинг и нужно ли с ним бороться»"></figure>
+      <figure class="it" style="--ar:1.0;left:0.000%;top:43.030%;width:34.770%;height:36.041%"><img class="pic" src="img/board/energiya.jpg" width="630" height="630" alt="Комикс: двое в креслах, за окном горит город, реплика «Я что-то никак не могу вернуть себе ту энергию, драйв, лёгкость, которые были пару лет назад»"></figure>
+      <figure class="it" style="--ar:1.0;left:4.220%;top:10.659%;width:28.773%;height:29.825%"><img class="pic" src="img/board/ustal.jpg" width="600" height="600" alt="Мем с котёнком: «Однажды я очень устал и теперь не могу обратно отдохнуть»"></figure>
+      <figure class="it" style="--ar:0.5825;left:70.554%;top:8.178%;width:28.071%;height:49.952%"><img class="pic" src="img/board/batrachka.jpg" width="466" height="800" alt="Мем: мужчина ночью за компьютером, подпись «Батрачка закончилась»"></figure>
+      <figure class="it book-it" tabindex="0" style="--ar:0.6313;left:41.224%;top:34.597%;width:27.017%;height:44.361%"><img class="pic book" src="img/board/han.jpg" width="440" height="697" alt="Обложка книги Бён-Чхоль Хана «Общество усталости»"><figcaption class="note"><b>Бён-Чхоль Хан. «Общество усталости», 2010</b><span>Короткая книга-эссе корейско-немецкого философа. Тезис Хана: усталость сегодня — следствие не давления извне, а избытка свободы. Общество достижений говорит «ты всё можешь», и человек выжимает себя сам, пока не выгорит.</span></figcaption></figure>
+      <figure class="it book-it" tabindex="0" style="--ar:0.6486;left:40.225%;top:0.000%;width:20.140%;height:32.186%"><img class="pic book" src="img/board/moshfegh.jpg" width="454" height="700" alt="Обложка романа Оттессы Мошфег «My Year of Rest and Relaxation»"><figcaption class="note"><b>Оттесса Мошфег. «Мой год отдыха и релакса», 2018</b><span>Роман американской писательницы о молодой жительнице Нью-Йорка, которая решает проспать целый год на снотворных, чтобы наконец отдохнуть от всего.</span></figcaption></figure>
+      <figure class="it book-it left" tabindex="0" style="--ar:0.663;left:74.819%;top:60.631%;width:25.181%;height:39.369%"><img class="pic book" src="img/board/berlant.jpg" width="364" height="549" alt="Обложка книги Лорен Берлант «Cruel Optimism»"><figcaption class="note"><b>Лорен Берлант. «Жестокий оптимизм», 2011</b><span>Книга американской исследовательницы культуры. По мнению Берлант, кризис перестал быть событием и стал повседневностью, поэтому усталость — уже не состояние, а постоянный режим жизни. И выматывает не сам кризис, а остатки надежды на то, что станет лучше.</span></figcaption></figure>
+    </div>
+    <p class="board-note">Наведите курсор на книгу</p>
+  </div>
+</section>
+
+<section id="task">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>02</span><h2>Задача</h2></div>
+  <div class="col">
+    <p>Мне захотелось придумать рекламу, которая не будет обещать исправить усталость, а <mark>заметит её такой, какая она есть</mark>, и внимательно в неё всмотрится.</p>
+  </div>
+</section>
+
+<section id="idea">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>03</span><h2>Идея</h2></div>
+  <div class="col">
+    <p>Я сразу подумала про сервис доставки, потому что это очень органичная категория для разговора об усталости.</p>
+    <p>Готовую еду мы часто заказываем на пределе усталости — в моменты, когда больше не вывозим.</p>
+    <p>Из всего этого сложился слоган гипотетической кампании для гипотетического сервиса «Велосамокат»:</p>
+    <p class="display">Везём тем,<br>кто не вывозит</p>
+  </div>
+</section>
+
+<section id="visual">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>04</span><h2>Визуальный принцип</h2></div>
+  <div class="col">
+    <p>Каждый кадр — <mark>портрет человека, которого в кадре нет</mark>. Снэпшот повседневности, которую кто-то за кадром не вывозит.</p>
+    <p>Пространства я намеренно перегрузила деталями. Такой плотностью я хочу одновременно передать само ощущение перегруженности и дать повод всмотреться — по следам собрать того, кому принадлежит этот мир.</p>
+  </div>
+  <div class="wide photos">
+    <figure><img class="frame" src="img/photo-desk.jpg" width="900" height="1273" alt="Рабочий стол ночью: мониторы, ноутбук, остатки еды навынос, пакеты доставки под столом"><figcaption>Стол. Ночь</figcaption></figure>
+    <figure><img class="frame" src="img/photo-kitchen.jpg" width="900" height="1273" alt="Кухня утром: недоеденная детская каша, хлеб и ветчина, детский рисунок на стене, на микроволновке 8:24"><figcaption>Кухня. 8:24</figcaption></figure>
+    <figure><img class="frame" src="img/photo-hall.jpg" width="900" height="1273" alt="Прихожая вечером: брошенные сумки и ноутбук, обувь, ключи, контейнер с едой и пакет доставки на полу"><figcaption>Прихожая. Вечер</figcaption></figure>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>05</span><h2>Почему это всё равно работает на бренд</h2></div>
+  <div class="col">
+    <p>Кадр работает на двух уровнях:</p>
+    <ol class="levels">
+      <li><span class="n">1</span><p><b>Инсайт быстро цепляет внимание.</b>Усталость и ощущение «не вывожу» узнаются почти моментально.</p></li>
+      <li><span class="n">2</span><p><b>Изображение удерживает внимание.</b>Чем дольше человек рассматривает пространство, <mark>тем дольше остаётся рядом с брендом</mark>.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="media">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>06</span><h2>Медиамикс</h2></div>
+  <div class="col">
+    <p>Наружка — основной формат, в котором я вижу эту кампанию.</p>
+    <p>Кадр держится на деталях, а детали лучше всего читаются крупно и там, где человек и так настроен задержаться.</p>
+    <p>Поэтому место для этой наружки — <mark>в тех частях города, где мы ждём</mark>: остановки у бизнес-центров, стенды у музыкальных и спортивных школ и секций, пересадки с метро на автобус по дороге домой.</p>
+  </div>
+  <div class="wide formats">
+    <figure><div class="jrow">
+      <img class="frame" style="--ar:1" src="img/citi-stop-kitchen.jpg" width="1400" height="1400" alt="Цифровой ситиформат с кадром кухни на остановке на закате">
+      <img class="frame" style="--ar:0.8" src="img/citi-stop-hall.jpg" width="1200" height="1500" alt="Цифровой ситиформат с кадром прихожей на остановке ночью">
+      <img class="frame" style="--ar:0.8032" src="img/citi-stop-desk.jpg" width="1200" height="1494" alt="Цифровой ситиформат с кадром рабочего стола на остановке днём">
+    </div><figcaption><b>Цифровой ситиформат</b> · остановки: утро, вечер, ночь</figcaption></figure>
+    <figure class="single"><img class="frame" src="img/pair-street.jpg" width="1100" height="1467" alt="Пара бумажных плакатов на уличной стене: сверху слоган, снизу кадр кухни"><figcaption><b>Бумажные пары A2</b> · слоган над кадром</figcaption></figure>
+  </div>
+</section>
+
+<section id="attention">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>07</span><h2>Реклама, которая возвращает внимание человеку</h2></div>
+  <div class="col">
+    <p>Когда я придумывала эту кампанию, мне хотелось сделать что-то нужное не только бренду, но и нам всем — с нашей общей усталостью.</p>
+    <p>И мне очень нравится этот концепт тем, что он <mark>не только забирает внимание, но и возвращает его человеку</mark>.</p>
+    <p>Через узнавание он подталкивает увидеть своё пространство как часть личной истории и, возможно, почувствовать чуть больше авторства и тепла в отношениях с собственной повседневностью.</p>
+    <p class="question">Не на это ли сейчас у нас самый острый запрос?</p>
+  </div>
+</section>
+
+<footer class="end" id="contacts">
+  <p>Напоминаю, что пока это спекулятивный концепт, и многое в нём ещё предстоит доработать. Если хочется вместе сделать его реальным, напишите. Одна я его не вывезу.</p>
+  <div class="contacts"><a class="pill lime" href="https://t.me/your_telegram">Telegram</a><a class="pill" href="mailto:you@example.com">Почта</a></div>
+  <p class="sign">Лиза Александрова, 2026. «Велосамокат» — вымышленный бренд.</p>
+</footer>
+
+<script>
+// Keep short Russian words attached to the next word (no hanging prepositions).
+(() => {
+  const re = /(^|[\s(«—])((?:[а-яёА-ЯЁ]{1,2}|не|но|на|за|по|из|от|до|же|ли|бы|что|как))\s/g;
+  const walk = (n) => {
+    for (const c of n.childNodes) {
+      if (c.nodeType === 3) c.nodeValue = c.nodeValue.replace(re, '$1$2 ').replace(re, '$1$2 ').replace(/\s—/g, ' —');
+      else if (c.nodeType === 1) walk(c);
+    }
+  };
+  document.querySelectorAll('.col p, .intro p, .end p, .hero .sub').forEach(walk);
+})();
+</script>
+</body>
+</html>
