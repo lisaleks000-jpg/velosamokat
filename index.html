@@ -7,8 +7,7 @@
 <meta name="description" content="Спекулятивная кампания для сервиса доставки «Велосамокат»: как бренды могут говорить об усталости. Кейс Лизы Александровой.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-<!-- Превью для Telegram, LinkedIn и соцсетей.
-     TODO: замените USERNAME и REPO на свои, когда страница появится на GitHub Pages. -->
+<!-- Превью для Telegram, LinkedIn и соцсетей. -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Везём тем, кто не вывозит">
@@ -68,7 +67,6 @@ a.pill:hover{background:var(--lime)}
 .hero{text-align:center;padding-block:clamp(56px,10vw,120px) 0;display:flex;flex-direction:column;align-items:center;gap:22px}
 .hero h1{margin:0;font-weight:400;font-size:clamp(50px,9.4vw,124px);line-height:.94;letter-spacing:-.045em;text-wrap:balance}
 .hero .sub{font-size:clamp(16px,1.6vw,20px);margin-top:6px}
-.hero .roles{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 
 /* Wide media */
 .wide{max-width:var(--wide);margin-inline:auto}
@@ -77,7 +75,8 @@ a.pill:hover{background:var(--lime)}
 .hero-img .frame{aspect-ratio:2200/827;object-fit:cover}
 .single{max-width:520px;margin-inline:auto;width:100%}
 .jrow{display:flex;gap:clamp(8px,1.4vw,16px)}
-.jrow .frame{flex:var(--ar) 1 0;min-width:0;aspect-ratio:var(--ar);object-fit:cover}
+.jrow figure{flex:var(--ar) 1 0;min-width:0}
+.jrow .frame{aspect-ratio:var(--ar);object-fit:cover}
 
 /* Intro plates */
 .intro{max-width:var(--col);margin:clamp(56px,8vw,88px) auto 0;display:grid;gap:26px}
@@ -99,6 +98,7 @@ section[id]{margin-top:clamp(120px,15vw,190px)}
 /* Reading column */
 .col{max-width:var(--col);margin-inline:auto;display:flex;flex-direction:column;gap:22px}
 mark{color:inherit;background:var(--lime);border-radius:999px;padding:.02em .38em .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.uline{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:.32em;text-underline-offset:.06em;text-decoration-skip-ink:none}
 .display{font-weight:400;font-size:clamp(40px,6.4vw,76px);line-height:.98;letter-spacing:-.04em;text-wrap:balance;margin-top:28px}
 .question{font-weight:400;font-size:clamp(28px,3.8vw,46px);line-height:1.08;letter-spacing:-.03em;text-wrap:balance;margin-top:34px}
 
@@ -117,8 +117,9 @@ figcaption b{color:var(--ink);font-weight:700}
 .formats{display:grid;gap:clamp(40px,6vw,64px);margin-top:clamp(48px,7vw,72px)}
 
 /* Footer */
-.end{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;gap:26px;padding-bottom:clamp(72px,10vw,120px)}
-.end .contacts{display:flex;flex-wrap:wrap;gap:10px}
+.end{max-width:var(--col);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;padding-bottom:clamp(72px,10vw,120px)}
+.end .ch-head{margin-bottom:clamp(22px,3vw,46px)}
+.end .contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px}
 .end .contacts .pill{padding:14px 24px 15px;font-size:15px}
 .end .sign{font-size:13px;color:var(--mute)}
 
@@ -157,14 +158,13 @@ figcaption b{color:var(--ink);font-weight:700}
   .plate{grid-template-columns:minmax(0,1fr);gap:8px}
   .photos{grid-template-columns:minmax(0,1fr);gap:28px;max-width:440px;margin-inline:auto}
   .jrow{flex-wrap:wrap}
-  .jrow .frame{flex:1 1 100%}
+  .jrow figure{flex:1 1 100%}
   .ch-head h2{font-size:19px}
 }
 </style>
 </head>
 <body>
 
-<!-- TODO: в двух местах ниже замените your_telegram и you@example.com на свои контакты -->
 <header class="top">
   <span class="name">Лиза Александрова</span>
   <nav aria-label="Навигация">
@@ -176,7 +176,6 @@ figcaption b{color:var(--ink);font-weight:700}
 <section class="hero">
   <h1>Везём тем,<br>кто не вывозит</h1>
   <p class="sub">Спекулятивная кампания для сервиса доставки «Велосамокат»</p>
-  <div class="roles"><span class="pill plain">Стратегия</span><span class="pill plain">Концепция</span><span class="pill plain">Визуал</span></div>
 </section>
 
 <figure class="wide hero-img">
@@ -184,16 +183,24 @@ figcaption b{color:var(--ink);font-weight:700}
 </figure>
 
 <section class="intro">
-  <div class="plate"><span class="pill small">О кейсе</span><p>Это спекулятивный проект: кампанию я придумала сама, без заказчика и брифа. «Велосамокат» — вымышленный бренд. Кампания не делалась по заказу какого-либо реального сервиса доставки и ни с кем не согласована. Мне хотелось проверить одну гипотезу о том, как бренды могут говорить об усталости внутри бренд-кома.</p></div>
-  <div class="plate"><span class="pill small">Обо мне</span><p>Я — Лиза Александрова, бренд-стратег и трендвотчер. Работаю на стыке стратегии, качественных исследований и культурной аналитики.</p></div>
-  <div class="plate"><span class="pill small">Связаться</span><p>Если хотите запустить эту кампанию по-настоящему, напишите мне: <a class="inline-link" href="https://t.me/your_telegram">Telegram</a> <a class="inline-link" href="mailto:you@example.com">почта</a></p></div>
+  <div class="plate"><span class="pill small">О кейсе</span><p>Это спекулятивный проект: кампанию я придумала сама, без заказчика и брифа. «Велосамокат» — вымышленный бренд. Кампания не делалась по заказу какого-либо реального сервиса доставки и ни с кем не согласована.</p></div>
+  <div class="plate"><span class="pill small">Обо мне</span><p>Меня зовут Лиза. Я креативный стратег.<br>Работаю на стыке креатива, трендвотчинга в маркетинге и исследований культуры.</p></div>
+  <div class="plate"><span class="pill small">Связаться</span><p><a class="inline-link" href="https://t.me/lisaleksa">Telegram</a> <a class="inline-link" href="mailto:lisaleks000@gmail.com">Почта</a></p></div>
 </section>
 
 <section id="observation">
   <div class="ch-head"><span class="circ"><span class="vh">Глава </span>01</span><h2>Наблюдение</h2></div>
   <div class="col">
-    <p>Как стратег я давно ищу возможность поработать в бренд-коме с чувством современной усталости.</p>
-    <p>Усталость — чувство, которое мы так или иначе разделяем, поэтому это хорошая рамка для разговора с широкой аудиторией. При этом бренды до сих пор говорят о ней в основном очень поверхностно. Замечая усталость, реклама почти всегда предлагает её вылечить: выспаться на нашем матрасе, взбодриться нашим кофе, разгрузить голову нашим приложением.</p>
+    <p><mark>Как стратег я давно ищу возможность поработать в бренд-коме с чувством современной усталости.</mark></p>
+    <p>Это состояние, которое большинство из нас в том или ином виде разделяет.</p>
+    <p>Поэтому усталость — хорошая рамка, когда нужно поговорить по существу, но с большой аудиторией.</p>
+  </div>
+</section>
+
+<section id="tension">
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>1.1</span><h2>Напряжение</h2></div>
+  <div class="col">
+    <p>При этом бренды до сих пор говорят о ней в основном очень поверхностно. Замечая усталость, реклама почти всегда предлагает её вылечить: выспаться на нашем матрасе, взбодриться нашим кофе, разгрузить голову нашим приложением.</p>
     <p><mark>Мне это кажется нечестным.</mark></p>
     <p>Усталость современного человека скорее экзистенциальная, чем физическая, и все понимают, что ни один продукт её не отменит.</p>
   </div>
@@ -212,7 +219,7 @@ figcaption b{color:var(--ink);font-weight:700}
 </section>
 
 <section id="task">
-  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>02</span><h2>Задача</h2></div>
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>02</span><h2>Задачка</h2></div>
   <div class="col">
     <p>Мне захотелось придумать рекламу, которая не будет обещать исправить усталость, а <mark>заметит её такой, какая она есть</mark>, и внимательно в неё всмотрится.</p>
   </div>
@@ -222,22 +229,23 @@ figcaption b{color:var(--ink);font-weight:700}
   <div class="ch-head"><span class="circ"><span class="vh">Глава </span>03</span><h2>Идея</h2></div>
   <div class="col">
     <p>Я сразу подумала про сервис доставки, потому что это очень органичная категория для разговора об усталости.</p>
-    <p>Готовую еду мы часто заказываем на пределе усталости — в моменты, когда больше не вывозим.</p>
-    <p>Из всего этого сложился слоган гипотетической кампании для гипотетического сервиса «Велосамокат»:</p>
+    <p>Готовую еду мы часто заказываем на пределе усталости — в моменты, когда <mark>больше не вывозим.</mark></p>
+    <p>Из всего этого сложился слоган гипотетической кампании для гипотетического сервиса доставки «Велосамокат»:</p>
     <p class="display">Везём тем,<br>кто не вывозит</p>
   </div>
 </section>
 
 <section id="visual">
-  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>04</span><h2>Визуальный принцип</h2></div>
+  <div class="ch-head"><span class="circ"><span class="vh">Глава </span>04</span><h2>Визуальная концепция</h2></div>
   <div class="col">
+    <p>Основа кампании — реальная съёмка. На данный момент я визуализировала прототипы в нейронке.</p>
     <p>Каждый кадр — <mark>портрет человека, которого в кадре нет</mark>. Снэпшот повседневности, которую кто-то за кадром не вывозит.</p>
     <p>Пространства я намеренно перегрузила деталями. Такой плотностью я хочу одновременно передать само ощущение перегруженности и дать повод всмотреться — по следам собрать того, кому принадлежит этот мир.</p>
   </div>
   <div class="wide photos">
-    <figure><img class="frame" src="img/photo-desk.jpg" width="900" height="1273" alt="Рабочий стол ночью: мониторы, ноутбук, остатки еды навынос, пакеты доставки под столом"><figcaption>Стол. Ночь</figcaption></figure>
-    <figure><img class="frame" src="img/photo-kitchen.jpg" width="900" height="1273" alt="Кухня утром: недоеденная детская каша, хлеб и ветчина, детский рисунок на стене, на микроволновке 8:24"><figcaption>Кухня. 8:24</figcaption></figure>
-    <figure><img class="frame" src="img/photo-hall.jpg" width="900" height="1273" alt="Прихожая вечером: брошенные сумки и ноутбук, обувь, ключи, контейнер с едой и пакет доставки на полу"><figcaption>Прихожая. Вечер</figcaption></figure>
+    <figure><img class="frame" src="img/photo-desk.jpg" width="900" height="1273" alt="Рабочий стол ночью: мониторы, ноутбук, остатки еды навынос, пакеты доставки под столом"><figcaption>Прототип 1</figcaption></figure>
+    <figure><img class="frame" src="img/photo-kitchen.jpg" width="900" height="1273" alt="Кухня утром: недоеденная детская каша, хлеб и ветчина, детский рисунок на стене, на микроволновке 8:24"><figcaption>Прототип 2</figcaption></figure>
+    <figure><img class="frame" src="img/photo-hall.jpg" width="900" height="1273" alt="Прихожая вечером: брошенные сумки и ноутбук, обувь, ключи, контейнер с едой и пакет доставки на полу"><figcaption>Прототип 3</figcaption></figure>
   </div>
 </section>
 
@@ -255,16 +263,15 @@ figcaption b{color:var(--ink);font-weight:700}
 <section id="media">
   <div class="ch-head"><span class="circ"><span class="vh">Глава </span>06</span><h2>Медиамикс</h2></div>
   <div class="col">
-    <p>Наружка — основной формат, в котором я вижу эту кампанию.</p>
-    <p>Кадр держится на деталях, а детали лучше всего читаются крупно и там, где человек и так настроен задержаться.</p>
-    <p>Поэтому место для этой наружки — <mark>в тех частях города, где мы ждём</mark>: остановки у бизнес-центров, стенды у музыкальных и спортивных школ и секций, пересадки с метро на автобус по дороге домой.</p>
+    <p>Наружка — основной формат, в котором я вижу эту кампанию. Кадр держится на деталях, а детали лучше всего читаются крупно и дольше всего — там, где человек и так настроен задержаться.</p>
+    <p>Поэтому место для этой наружки — <mark>в тех частях города, где мы ждём</mark>: остановки, стены домов у школ / детских садов, станции метро.</p>
   </div>
   <div class="wide formats">
-    <figure><div class="jrow">
-      <img class="frame" style="--ar:1" src="img/citi-stop-kitchen.jpg" width="1400" height="1400" alt="Цифровой ситиформат с кадром кухни на остановке на закате">
-      <img class="frame" style="--ar:0.8" src="img/citi-stop-hall.jpg" width="1200" height="1500" alt="Цифровой ситиформат с кадром прихожей на остановке ночью">
-      <img class="frame" style="--ar:0.8032" src="img/citi-stop-desk.jpg" width="1200" height="1494" alt="Цифровой ситиформат с кадром рабочего стола на остановке днём">
-    </div><figcaption><b>Цифровой ситиформат</b> · остановки: утро, вечер, ночь</figcaption></figure>
+    <div class="jrow">
+      <figure style="--ar:1"><img class="frame" src="img/citi-stop-kitchen.jpg" width="1400" height="1400" alt="Цифровой ситиформат с кадром кухни на остановке на закате"><figcaption>Прототип ситиформата 1</figcaption></figure>
+      <figure style="--ar:0.8"><img class="frame" src="img/citi-stop-hall.jpg" width="1200" height="1500" alt="Цифровой ситиформат с кадром прихожей на остановке ночью"><figcaption>Прототип ситиформата 2</figcaption></figure>
+      <figure style="--ar:0.8032"><img class="frame" src="img/citi-stop-desk.jpg" width="1200" height="1494" alt="Цифровой ситиформат с кадром рабочего стола на остановке днём"><figcaption>Прототип ситиформата 3</figcaption></figure>
+    </div>
     <figure class="single"><img class="frame" src="img/pair-street-desk.jpg" width="941" height="1672" alt="Пара бумажных плакатов на серой стене рядом с граффити: сверху слоган, снизу кадр заваленного рабочего стола"><figcaption><b>Бумажные пары A2</b> · слоган над кадром</figcaption></figure>
   </div>
 </section>
@@ -274,14 +281,16 @@ figcaption b{color:var(--ink);font-weight:700}
   <div class="col">
     <p>Когда я придумывала эту кампанию, мне хотелось сделать что-то нужное не только бренду, но и нам всем — с нашей общей усталостью.</p>
     <p>И мне очень нравится этот концепт тем, что он <mark>не только забирает внимание, но и возвращает его человеку</mark>.</p>
-    <p>Через узнавание он подталкивает увидеть своё пространство как часть личной истории и, возможно, почувствовать чуть больше авторства и тепла в отношениях с собственной повседневностью.</p>
+    <p>Через узнавание он подталкивает увидеть своё пространство как часть личной истории и, возможно, <span class="uline">почувствовать чуть больше авторства и тепла в отношениях с собственной повседневностью.</span></p>
     <p class="question">Не на это ли сейчас у нас самый острый запрос?</p>
   </div>
 </section>
 
 <footer class="end" id="contacts">
-  <p>Напоминаю, что пока это спекулятивный концепт, и многое в нём ещё предстоит доработать. Если хочется вместе сделать его реальным, напишите. Одна я его не вывезу.</p>
-  <div class="contacts"><a class="pill lime" href="https://t.me/your_telegram">Telegram</a><a class="pill" href="mailto:you@example.com">Почта</a></div>
+  <div class="ch-head"><span class="circ">П.С</span></div>
+  <p>Напоминаю, что пока это спекулятивный концепт, и многое в нём ещё предстоит доработать.</p>
+  <p>Если хочется вместе сделать его реальным, напишите. Одна я его не вывезу.</p>
+  <div class="contacts"><a class="pill lime" href="https://t.me/lisaleksa">Telegram</a><a class="pill" href="mailto:lisaleks000@gmail.com">Почта</a></div>
   <p class="sign">Лиза Александрова, 2026. «Велосамокат» — вымышленный бренд.</p>
 </footer>
 
