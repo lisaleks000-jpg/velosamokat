@@ -81,6 +81,7 @@ a.pill:hover{background:var(--lime)}
 /* Intro plates */
 .intro{max-width:var(--col);margin:clamp(56px,8vw,88px) auto 0;display:grid;gap:26px}
 .plate{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;font-size:16px;line-height:1.55}
+.plate .stack{display:grid;gap:12px}
 .plate .pill{justify-self:start;align-self:start;margin-top:1px}
 .inline-link{background:var(--lime);border-radius:999px;padding:1px 10px 2px;white-space:nowrap;text-decoration:none}
 .inline-link:hover{text-decoration:underline}
@@ -183,7 +184,7 @@ figcaption b{color:var(--ink);font-weight:700}
 </figure>
 
 <section class="intro">
-  <div class="plate"><span class="pill small">О кейсе</span><p>Это спекулятивный проект: кампанию я придумала сама, без заказчика и брифа. «Велосамокат» — вымышленный бренд. Кампания не делалась по заказу какого-либо реального сервиса доставки и ни с кем не согласована.</p></div>
+  <div class="plate"><span class="pill small">О кейсе</span><div class="stack"><p>Это спекулятивный проект, «Велосамокат» — вымышленный бренд. Меня никто не просил это придумывать.</p><p><span class="uline">Мне просто было интересно, смогу ли я в реальной кампании отработать проблему, которую как стратег вижу сейчас в бренд-коме.</span></p></div></div>
   <div class="plate"><span class="pill small">Обо мне</span><p>Меня зовут Лиза. Я креативный стратег.<br>Работаю на стыке креатива, трендвотчинга в маркетинге и исследований культуры.</p></div>
   <div class="plate"><span class="pill small">Связаться</span><p><a class="inline-link" href="https://t.me/lisaleksa">Telegram</a> <a class="inline-link" href="mailto:lisaleks000@gmail.com">Почта</a></p></div>
 </section>
